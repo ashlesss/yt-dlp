@@ -2008,7 +2008,8 @@ class YoutubeDL:
                                        self.prepare_filename(ie_copy, 'pl_description')) is None:
                 return
             # TODO: This should be passed to ThumbnailsConvertor if necessary
-            self._write_thumbnails('playlist', ie_result, self.prepare_filename(ie_copy, 'pl_thumbnail'))
+            # Don't download playlist thumbnails
+            # self._write_thumbnails('playlist', ie_result, self.prepare_filename(ie_copy, 'pl_thumbnail'))
 
         if lazy:
             if self.params.get('playlistreverse') or self.params.get('playlistrandom'):
